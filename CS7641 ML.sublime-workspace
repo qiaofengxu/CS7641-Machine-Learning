@@ -516,14 +516,6 @@
 			}
 		},
 		{
-			"file": "Prep work/percepton.py",
-			"settings":
-			{
-				"buffer_size": 1465,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "Prep work/Cross Validation SKL.py",
 			"settings":
 			{
@@ -564,6 +556,7 @@
 	},
 	"file_history":
 	[
+		"/C/Users/kmbrooks/Documents/My Courses/CS7641 Machine Learning/Prep work/percepton.py",
 		"/Users/kbrooks/Documents/CS7641 Machine Learning/Vector operations.py",
 		"/Users/kbrooks/Documents/MH/Projects/Inventory Planning Tool/data/Mfg specs prices and volumes.xlsx",
 		"/Users/kbrooks/Documents/MH/Projects/Inventory Planning Tool/common specs.py",
@@ -761,7 +754,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -817,39 +810,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "Prep work/percepton.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1465,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								655,
-								655
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage"
-						},
-						"translation.x": -0.0,
-						"translation.y": 225.0,
-						"zoom_level": 1.0
-					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 2,
 					"file": "Prep work/Cross Validation SKL.py",
 					"semi_transient": false,
 					"settings":
@@ -874,7 +839,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]

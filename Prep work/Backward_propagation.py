@@ -20,16 +20,23 @@ import numpy as np
 class Network():
 
     def __init__(self, sizes):
+    	'''Sets the size, biases and initial weights of a neural net by
+    	specifying the number of nodes per layer in a list. Example: 
+    	[3, 5, 1]'''
         self.num_layers = len(sizes)
         self.sizes = sizes
-        self.biases = [np.random.randn(y, 1) for y in sizes[1:]]
+        self.biases = [np.random.randn(y, 1) for y in sizes[1:]] # no bias input layer
         self.weights = [np.random.randn(y, x) 
-                        for x, y in zip(sizes[:-1], sizes[1:])]
+                        for x, y in zip(sizes[:-1], sizes[1:])]  #  generate initial weights from each node
+                        										 #  in a layer to each node in following
+                        										 #  layer.
 
     def feedforward(self, a):
         """Return the output of the network if "a" is input."""
+        """ What should the input be?"""
         for b, w in zip(self.biases, self.weights):
             a = sigmoid_vec(np.dot(w, a)+b)
+            print "b", b, "w", w, "a", a
         return a
 
     def SGD(self, training_data, epochs, mini_batch_size, eta,
@@ -122,9 +129,7 @@ class Network():
         \partial a for the output activations."""
         return (output_activations-y) 
 
-net = Network([2, 3, 1])
 
-print net
 
 #### Miscellaneous functions
 def sigmoid(z):
@@ -138,3 +143,18 @@ def sigmoid_prime(z):
     return sigmoid(z)*(1-sigmoid(z))
 
 sigmoid_prime_vec = np.vectorize(sigmoid_prime)
+
+###  test runs
+
+net = Network([2, 3, 1])
+
+print "layers:", net.num_layers
+print "sizes:", net.sizes
+print "biases:"
+for bias in net.biases:
+	print bias
+print "weights:"
+for weight in net.weights:
+	print weight
+
+print "feedforward:\n", net.feedforward(0)
